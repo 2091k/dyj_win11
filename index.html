@@ -1,0 +1,11 @@
+<#
+功能：直接打开 设备和打印机
+#>
+$shellCmd = "shell:::{A8A91A66-3A7D-4424-8D24-04E180695C7A}"
+try {
+    Write-Host "正在打开【设备和打印机】..."
+    Start-Process explorer.exe -ArgumentList $shellCmd
+}
+catch {
+    Write-Host "打开失败: $_"
+}
